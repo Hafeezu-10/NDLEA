@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120" role="img" aria-label="Drug Authentication System Emblem">
+  <defs>
+    <linearGradient id="shieldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b5d3b"/>
+      <stop offset="100%" stop-color="#063b25"/>
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#d97706"/>
+    </linearGradient>
+  </defs>
+  <path d="M60 8 L104 24 V58 C104 84 85 103 60 112 C35 103 16 84 16 58 V24 Z" fill="url(#shieldGrad)" stroke="url(#goldGrad)" stroke-width="3.5"/>
+  <path d="M60 17 L95 30 V58 C95 79 79 95 60 103 C41 95 25 79 25 58 V30 Z" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="1.5"/>
+  <!-- Medical Cross -->
+  <rect x="53" y="34" width="14" height="38" rx="3" fill="#ffffff"/>
+  <rect x="41" y="46" width="38" height="14" rx="3" fill="#ffffff"/>
+  <!-- Verification Check Badge -->
+  <circle cx="82" cy="80" r="14" fill="#10b981" stroke="#ffffff" stroke-width="2.5"/>
+  <path d="M75.5 80.5 L80 85 L89 75" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
