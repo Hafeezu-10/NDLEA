@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Administrator Login | Online Drug Authentication System</title>
+  <link rel="icon" type="image/svg+xml" href="assets/icons/emblem.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="top-notice">
+    <i class="fa-solid fa-shield-halved"></i>
+    Online Drug Authentication &amp; Verification Portal &mdash; Authorized Administrative Access
+  </div>
+
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="brand">
+        <img src="assets/icons/emblem.svg" alt="System Emblem">
+        <div class="brand-text">
+          <span class="brand-title">Drug Authentication System</span>
+          <span class="brand-subtitle">NDLEA Hadejia Branch Case Study</span>
+        </div>
+      </a>
+
+      <button type="button" class="nav-toggle" id="nav-toggle" aria-label="Toggle Navigation">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+        <li><a href="verify.html"><i class="fa-solid fa-shield-halved"></i> Verify Drug</a></li>
+        <li><a href="report.html"><i class="fa-solid fa-flag"></i> Report Drug</a></li>
+        <li><a href="login.html" class="nav-admin-btn active"><i class="fa-solid fa-user-lock"></i> Admin Login</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main class="login-wrapper">
+    <div class="login-card">
+      <div class="login-header">
+        <img src="assets/icons/emblem.svg" alt="System Emblem">
+        <h1>Administrator Login</h1>
+        <p>Sign in to access the Drug Authentication Management Dashboard</p>
+      </div>
+
+      <div class="alert alert-info">
+        <i class="fa-solid fa-circle-info"></i>
+        <div>
+          <strong>Authorized Access:</strong> Sign in with your administrator credentials to manage drug records, verification logs, and suspicious drug reports.
+        </div>
+      </div>
+
+      <div id="login-error" class="alert alert-danger" style="display: none;">
+        <i class="fa-solid fa-circle-exclamation"></i>
+        <span>Invalid credentials.</span>
+      </div>
+
+      <form id="admin-login-form">
+        <div class="form-group">
+          <label for="login-username">Username</label>
+          <input
+            type="text"
+            id="login-username"
+            class="form-control"
+            placeholder="Enter administrator username"
+            autocomplete="username"
+            required
+          >
+        </div>
+
+        <div class="form-group">
+          <label for="login-password">Password</label>
+          <div class="input-with-icon">
+            <input
+              type="password"
+              id="login-password"
+              class="form-control"
+              placeholder="Enter password"
+              autocomplete="current-password"
+              required
+            >
+            <button
+              type="button"
+              class="input-icon-btn"
+              id="toggle-password-btn"
+              aria-label="Show password"
+            >
+              <i class="fa-solid fa-eye"></i>
+            </button>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-lg" style="width: 100%; margin-top: 0.4rem;">
+          <i class="fa-solid fa-right-to-bracket"></i> Sign In to Dashboard
+        </button>
+      </form>
+
+      <div style="text-align: center; margin-top: 1.25rem; font-size: 0.85rem; color: var(--text-muted);">
+        <a href="index.html" style="color: var(--primary); font-weight: 600;">
+          <i class="fa-solid fa-arrow-left"></i> Return to Public Homepage
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <script src="js/storage.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>
+

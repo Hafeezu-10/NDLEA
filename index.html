@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online Drug Authentication System | NDLEA Hadejia Branch</title>
+  <link rel="icon" type="image/svg+xml" href="assets/icons/emblem.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Top System Bar -->
+  <div class="top-notice">
+    <i class="fa-solid fa-shield-halved"></i>
+    Online Drug Authentication &amp; Verification Portal &mdash; Case Study: NDLEA Hadejia Branch
+  </div>
+
+  <!-- Navigation -->
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="brand">
+        <img src="assets/icons/emblem.svg" alt="System Emblem">
+        <div class="brand-text">
+          <span class="brand-title">Drug Authentication System</span>
+          <span class="brand-subtitle">NDLEA Hadejia Branch Case Study</span>
+        </div>
+      </a>
+
+      <button type="button" class="nav-toggle" id="nav-toggle" aria-label="Toggle Navigation">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html" class="active"><i class="fa-solid fa-house"></i> Home</a></li>
+        <li><a href="verify.html"><i class="fa-solid fa-shield-halved"></i> Verify Drug</a></li>
+        <li><a href="report.html"><i class="fa-solid fa-flag"></i> Report Drug</a></li>
+        <li><a href="#how-it-works"><i class="fa-solid fa-circle-question"></i> How It Works</a></li>
+        <li><a href="#contact"><i class="fa-solid fa-envelope"></i> Contact</a></li>
+        <li><a href="login.html" class="nav-admin-btn"><i class="fa-solid fa-user-lock"></i> Admin Login</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <div class="hero-badge">
+          <i class="fa-solid fa-check-double"></i>
+          <span>Web-Based Pharmaceutical Record Verification</span>
+        </div>
+        <h1>Verify Registered Drug Records Before Use</h1>
+        <p>
+          A web-based pharmaceutical verification and record management system developed for the National Drug Law Enforcement Agency (NDLEA), Hadejia Branch case study, supporting digital drug code verification, QR lookup, and suspicious product reporting.
+        </p>
+        <div class="hero-actions">
+          <a href="verify.html" class="btn btn-accent btn-lg">
+            <i class="fa-solid fa-qrcode"></i> Open Full Verification &amp; QR Scanner
+          </a>
+          <a href="report.html" class="btn btn-outline-white btn-lg">
+            <i class="fa-solid fa-triangle-exclamation"></i> Report Suspicious Drug
+          </a>
+        </div>
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <strong id="hero-stat-drugs">5</strong>
+            <span>Registered Drug Records</span>
+          </div>
+          <div class="hero-stat">
+            <strong id="hero-stat-verifications">4</strong>
+            <span>Logged Verifications</span>
+          </div>
+          <div class="hero-stat">
+            <strong>24/7</strong>
+            <span>Instant QR &amp; Code Lookup</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Drug Authentication Card -->
+      <div class="hero-verify-card">
+        <h2><i class="fa-solid fa-magnifying-glass-plus" style="color: var(--primary);"></i> Quick Drug Verification</h2>
+        <p class="sub">Enter a unique drug authentication code or launch the QR scanner.</p>
+
+        <form id="hero-verify-form">
+          <div class="form-group">
+            <label for="hero-auth-code">Authentication Code</label>
+            <input
+              type="text"
+              id="hero-auth-code"
+              class="form-control"
+              placeholder="e.g. NDLEA-HDJ-102938AB"
+              autocomplete="off"
+              required
+            >
+          </div>
+          <div style="display: flex; gap: 0.65rem; flex-wrap: wrap;">
+            <button type="submit" class="btn btn-primary" style="flex: 1;">
+              <i class="fa-solid fa-shield-check"></i> Verify Drug
+            </button>
+            <a href="verify.html#qr-scanner" class="btn btn-outline">
+              <i class="fa-solid fa-qrcode"></i> Scan QR
+            </a>
+          </div>
+        </form>
+
+        <div class="sample-codes-hint">
+          <strong>Quick Test Codes:</strong><br>
+          <span class="code-chip" data-sample-code="NDLEA-HDJ-102938AB">NDLEA-HDJ-102938AB</span>
+          <span class="code-chip" data-sample-code="NDLEA-HDJ-445566CD">NDLEA-HDJ-445566CD</span>
+          <span class="code-chip" data-sample-code="NDLEA-HDJ-778899EF">NDLEA-HDJ-778899EF</span>
+          <span class="code-chip" data-sample-code="NDLEA-HDJ-332211GH">NDLEA-HDJ-332211GH</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works Section -->
+  <section class="section section-white" id="how-it-works">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Workflow</span>
+        <h2>How the System Works</h2>
+        <p>Three straightforward steps to verify a product identifier against registered system records.</p>
+      </div>
+
+      <div class="grid-3">
+        <div class="card step-card">
+          <div class="step-number">1</div>
+          <h3>Enter or Scan Code</h3>
+          <p>Type the unique authentication code printed on the drug package or scan its QR code using your device camera or an uploaded QR image.</p>
+        </div>
+        <div class="card step-card">
+          <div class="step-number">2</div>
+          <h3>Database Lookup</h3>
+          <p>The system queries the drug registry to check record validity, expiry date, suspension status, and prior verification checks.</p>
+        </div>
+        <div class="card step-card">
+          <div class="step-number">3</div>
+          <h3>Review Result or Report</h3>
+          <p>Inspect manufacturer, batch, and date details immediately. If a code is invalid or suspicious, log a report for administrative review.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="section" id="features">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">System Capabilities</span>
+        <h2>Core Modules &amp; Features</h2>
+        <p>Designed to align with the System Analysis, Design, and Implementation documented in the project chapters.</p>
+      </div>
+
+      <div class="grid-3">
+        <div class="card feature-card">
+          <div class="feature-icon"><i class="fa-solid fa-shield-halved"></i></div>
+          <h3>Instant Code Verification</h3>
+          <p>Distinguishes between valid, previously verified, expired, suspended, and unregistered authentication codes.</p>
+        </div>
+        <div class="card feature-card">
+          <div class="feature-icon"><i class="fa-solid fa-qrcode"></i></div>
+          <h3>QR Generation &amp; Scanning</h3>
+          <p>Automatically generates downloadable QR codes for newly registered drugs and supports browser-based camera/image scanning.</p>
+        </div>
+        <div class="card feature-card">
+          <div class="feature-icon"><i class="fa-solid fa-clock-rotate-left"></i></div>
+          <h3>Verification Audit Trail</h3>
+          <p>Every manual or QR verification attempt is logged with timestamp and outcome for administrative monitoring.</p>
+        </div>
+        <div class="card feature-card">
+          <div class="feature-icon"><i class="fa-solid fa-capsules"></i></div>
+          <h3>Drug Record Management</h3>
+          <p>Administrators can register, edit, suspend, reactivate, and delete drug records with duplicate-code prevention.</p>
+        </div>
+        <div class="card feature-card">
+          <div class="feature-icon"><i class="fa-solid fa-flag"></i></div>
+          <h3>Suspicious Drug Reporting</h3>
+          <p>Public reporting form generates unique reference numbers and lets administrators track investigation status.</p>
+        </div>
+        <div class="card feature-card">
+          <div class="feature-icon"><i class="fa-solid fa-chart-line"></i></div>
+          <h3>Dynamic Admin Dashboard</h3>
+          <p>Real-time statistics cards and filterable tables for monitoring drug records, verification logs, and reports.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Suspicious Drug Reporting Section -->
+  <section class="section section-white" id="report-section">
+    <div class="container">
+      <div class="report-banner">
+        <div>
+          <h2><i class="fa-solid fa-bullhorn"></i> Found a Suspicious or Unregistered Drug?</h2>
+          <p>
+            Use the Suspicious Drug Reporting module to record details such as drug name, location, and description of suspicion. A unique reference number will be generated for tracking and review.
+          </p>
+        </div>
+        <a href="report.html" class="btn btn-accent btn-lg" style="white-space: nowrap;">
+          <i class="fa-solid fa-file-circle-plus"></i> Submit a Report
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact & Footer -->
+  <footer class="footer" id="contact">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h4>Online Drug Authentication System</h4>
+          <p>
+            Web-based pharmaceutical verification and record management system &mdash; Case Study: NDLEA Hadejia Branch, Jigawa State, Nigeria.
+          </p>
+          <p style="font-size: 0.8rem; color: #fbbf24; margin-top: 0.6rem;">
+            <i class="fa-solid fa-circle-info"></i> Notice: Verification confirms whether a product identifier matches a registered system record and does not replace laboratory chemical analysis.
+          </p>
+        </div>
+
+        <div>
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="verify.html">Verify Drug</a></li>
+            <li><a href="report.html">Report Suspicious Drug</a></li>
+            <li><a href="login.html">Administrator Login</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Case Study Contact</h4>
+          <ul>
+            <li><i class="fa-solid fa-location-dot"></i> Hadejia, Jigawa State, Nigeria</li>
+            <li><i class="fa-solid fa-building-shield"></i> NDLEA Hadejia Branch (Case Study)</li>
+            <li><i class="fa-solid fa-envelope"></i> support@drugauth-hadejia.org</li>
+            <li><i class="fa-solid fa-phone"></i> +234 (0) 800-000-0000</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>&copy; 2026 Online Drug Authentication System &mdash; NDLEA Hadejia Branch Case Study.</span>
+        <span>All rights reserved.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/storage.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
+

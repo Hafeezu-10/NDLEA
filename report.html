@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Report Suspicious Drug | Online Drug Authentication System</title>
+  <link rel="icon" type="image/svg+xml" href="assets/icons/emblem.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="top-notice">
+    <i class="fa-solid fa-shield-halved"></i>
+    Online Drug Authentication &amp; Verification Portal &mdash; Case Study: NDLEA Hadejia Branch
+  </div>
+
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="brand">
+        <img src="assets/icons/emblem.svg" alt="System Emblem">
+        <div class="brand-text">
+          <span class="brand-title">Drug Authentication System</span>
+          <span class="brand-subtitle">NDLEA Hadejia Branch Case Study</span>
+        </div>
+      </a>
+
+      <button type="button" class="nav-toggle" id="nav-toggle" aria-label="Toggle Navigation">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+        <li><a href="verify.html"><i class="fa-solid fa-shield-halved"></i> Verify Drug</a></li>
+        <li><a href="report.html" class="active"><i class="fa-solid fa-flag"></i> Report Drug</a></li>
+        <li><a href="login.html" class="nav-admin-btn"><i class="fa-solid fa-user-lock"></i> Admin Login</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <section class="page-header">
+    <div class="container">
+      <h1><i class="fa-solid fa-flag"></i> Report a Suspicious Drug</h1>
+      <p>Submit details of suspected counterfeit, unregistered, or tampered pharmaceutical products for administrative review.</p>
+    </div>
+  </section>
+
+  <main class="section" style="flex: 1;">
+    <div class="container" style="max-width: 780px;">
+      <div class="alert alert-warning">
+        <i class="fa-solid fa-triangle-exclamation"></i>
+        <div>
+          <strong>Reporting Notice:</strong> Reports submitted through this portal are recorded for administrative review within the system. For urgent enforcement matters, please contact the appropriate regulatory or law enforcement office directly.
+        </div>
+      </div>
+
+      <div id="report-success-box" class="alert alert-success" style="display: none;">
+        <i class="fa-solid fa-circle-check"></i>
+        <div>
+          <strong>Suspicious Drug Report Recorded!</strong><br>
+          Your generated reference number is <strong id="generated-report-ref" style="font-family: monospace;"></strong>. An administrator can review and update its status in the dashboard.
+        </div>
+      </div>
+
+      <div class="card">
+        <h2 style="font-size: 1.25rem; color: var(--primary-dark); margin-bottom: 1.1rem;">
+          Suspicious Drug Report Form
+        </h2>
+
+        <form id="public-report-form">
+          <div class="form-group">
+            <label for="report-drug-name">Drug Name / Suspected Product <span style="color: var(--danger);">*</span></label>
+            <input
+              type="text"
+              id="report-drug-name"
+              class="form-control"
+              placeholder="e.g. Unlabelled Analgesic Tablets or Code NDLEA-HDJ-..."
+              required
+            >
+          </div>
+
+          <div class="form-group">
+            <label for="report-location">Location Purchased or Found <span style="color: var(--danger);">*</span></label>
+            <input
+              type="text"
+              id="report-location"
+              class="form-control"
+              placeholder="e.g. Hadejia Central Market, Jigawa State"
+              required
+            >
+          </div>
+
+          <div class="form-group">
+            <label for="report-description">Description of Suspicion <span style="color: var(--danger);">*</span></label>
+            <textarea
+              id="report-description"
+              class="form-control"
+              placeholder="Describe the issue (e.g., failed code verification, broken seal, altered expiry date, blurry packaging)..."
+              required
+            ></textarea>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="report-reporter-name">Reporter Name (Optional)</label>
+              <input
+                type="text"
+                id="report-reporter-name"
+                class="form-control"
+                placeholder="Leave blank to remain anonymous"
+              >
+            </div>
+            <div class="form-group">
+              <label for="report-contact">Contact Information (Optional)</label>
+              <input
+                type="text"
+                id="report-contact"
+                class="form-control"
+                placeholder="Phone number or email (optional)"
+              >
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">
+            <i class="fa-solid fa-paper-plane"></i> Submit Suspicious Drug Report
+          </button>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom" style="padding-top: 0;">
+        <span>&copy; 2026 Online Drug Authentication System &mdash; NDLEA Hadejia Branch Case Study.</span>
+        <span><a href="index.html">Back to Home</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/storage.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/reports.js"></script>
+</body>
+</html>
+
